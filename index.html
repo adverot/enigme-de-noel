@@ -15,12 +15,20 @@
 <body>
     <main class="container d-flex flex-column justify-content-center vh-100">
         <h1 class="text-center my-3">Entrez le code</h1>
-        <div class="d-flex justify-content-center mt-5">
-            <input type="number" name="code1" id="code1" class="form-control-lg square-input mx-2 text-center fs-1">
-            <input type="number" name="code2" id="code2" class="form-control-lg square-input mx-2 text-center fs-1">
-            <input type="number" name="code3" id="code3" class="form-control-lg square-input mx-2 text-center fs-1">
-            <input type="number" name="code4" id="code4" class="form-control-lg square-input mx-2 text-center fs-1">
-        </div>
+        <form id="code" action="" class="mt-5">
+            <div class="d-flex justify-content-center">
+                <input type="number" name="code1" id="code1" class="form-control-lg square-input mx-2 text-center fs-1">
+                <input type="number" name="code2" id="code2" class="form-control-lg square-input mx-2 text-center fs-1">
+                <input type="number" name="code3" id="code3" class="form-control-lg square-input mx-2 text-center fs-1">
+                <input type="number" name="code4" id="code4" class="form-control-lg square-input mx-2 text-center fs-1">
+            </div>
+            <button type="submit" class="btn btn-primary mx-auto">Dévérouiller</button>
+        </form>
     </main>
+    <script>
+        document.getElementById('code').addEventListener('submit', (event) => {
+            event.preventDefault();
+        })
+    </script>
 </body>
 </html>
